@@ -47,6 +47,16 @@ def order_latte():
   else:
     print_message()
     return order_latte()
+  
+  def temp_of_drink():
+      res = input("How would you like your drink ? \n[a]hot \n [b]iced? ")
+  if res == "a":
+    print("Nice, Iced {} coming right up".format(drink_type))
+  elif res == "b":
+    print("Nice, Hot {} coming right up".format(drink_type))
+  else:
+      print_message()
+      return temp_of_drink()
 def type_of_cup():
   res = input('Would you like a plastic cup or did you bring your own reusable cup? \n[a] I\'ll need a cup. \n[b] Brought my own! \n> ')
 
