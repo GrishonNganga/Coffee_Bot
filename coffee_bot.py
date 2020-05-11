@@ -5,6 +5,8 @@ def coffee_bot():
   print("Alright, that\'s a {} {}!".format(size, drink_type))
   type_of_cup()
   name = input("Can I get your name please?")
+  temp_of_drink()
+  type_of_cup()
   print("Thanks, {}! Your drink will be ready shortly.".format(name))
   return "Welcome to the Cafe"
 
@@ -48,15 +50,15 @@ def order_latte():
     print_message()
     return order_latte()
   
-  def temp_of_drink():
+def temp_of_drink():
       res = input("How would you like your drink ? \n[a]hot \n [b]iced? ")
-  if res == "a":
-    print("Nice, Iced {} coming right up".format(drink_type))
-  elif res == "b":
-    print("Nice, Hot {} coming right up".format(drink_type))
-  else:
-      print_message()
-      return temp_of_drink()
+      if res == "a":
+        print("Nice, Iced drink coming right up.")
+      elif res == "b":
+        print("Nice, Hot drink coming right up.")
+      else:
+        print_message()
+        return temp_of_drink()
 def type_of_cup():
   res = input('Would you like a plastic cup or did you bring your own reusable cup? \n[a] I\'ll need a cup. \n[b] Brought my own! \n> ')
 
