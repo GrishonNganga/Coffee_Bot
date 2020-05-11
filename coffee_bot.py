@@ -34,8 +34,18 @@ def get_drink_type():
     return get_drink_type
 
 def order_latte():
-  res = input("And what kind of milk for your latte? \n[a] 2%milk \n[b] Non-fat milk \n[c] Soy milk \n")
-  return res
+  res = input("And what kind of milk for your latte? \n[a] 2% milk \n[b] Non-fat milk \n[c] Soy milk \n")
+  if res == "a":
+    return "latte"
+  elif res == "b":
+    return "non-fat latte"
+  elif res == "c":
+    return "soy latte"
+  else:
+    print_message()
+    return order_latte()
+
+
 
   
 # Call coffee_bot()!
