@@ -4,6 +4,7 @@ def coffee_bot():
   drink_type = get_drink_type()
   print("Alright, that\'s a {} {}!".format(size, drink_type))
   name = input("Can I get your name please?")
+  print("Thanks, {}! Your drink will be ready shortly.".format(name))
   return "Welcome to the Cafe"
 
   
