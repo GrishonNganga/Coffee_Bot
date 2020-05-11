@@ -2,11 +2,11 @@
 def coffee_bot():
   size = get_size()
   print(size)
-
   drink_type = get_drink_type()
   print(drink_type)
-  
   return "Welcome to the Cafe"
+
+  
 def print_message():
     return "I'm sorry, I did not understand your selection. Please enter the corresponding letter for your response."
 def get_size():
@@ -21,11 +21,17 @@ def get_size():
       print_message()
       return get_size()  
 def get_drink_type():
-  res = input("What type of drink would you like? [a] Brewed Coffee [b] Mocha [c] Latte ")
-  return res
-      
+  res = input("What type of drink would you like ?\n[a] Brewed Coffee \n[b] Mocha \n[c] Latte \n")
+  if res == "a":
+    return "brewed coffee"
+  elif res == "b":
+    return "mocha"
+  elif res == "c":
+    return "latte"
+  else:
+    print_message()
+    return get_drink_type
 
-    # Call coffee_bot()!
-print(coffee_bot())
-size = get_size()
-print(size)
+  
+# Call coffee_bot()!
+coffee_bot()
