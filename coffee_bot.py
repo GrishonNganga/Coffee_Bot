@@ -20,6 +20,7 @@ def get_size():
     else:
       print_message()
       return get_size()  
+
 def get_drink_type():
   res = input("What type of drink would you like ?\n[a] Brewed Coffee \n[b] Mocha \n[c] Latte \n")
   if res == "a":
@@ -31,6 +32,10 @@ def get_drink_type():
   else:
     print_message()
     return get_drink_type
+
+def order_latte():
+  res = input("And what kind of milk for your latte? \n[a] 2%milk \n[b] Non-fat milk \n[c] Soy milk \n")
+  return res
 
   
 # Call coffee_bot()!
