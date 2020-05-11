@@ -1,6 +1,12 @@
 # Define your functions
 def coffee_bot():
-    return "Welcome to the Cafe"
+  size = get_size()
+  print(size)
+
+  drink_type = get_drink_type()
+  print(drink_type)
+  
+  return "Welcome to the Cafe"
 def print_message():
     return "I'm sorry, I did not understand your selection. Please enter the corresponding letter for your response."
 def get_size():
@@ -14,6 +20,9 @@ def get_size():
     else:
       print_message()
       return get_size()  
+def get_drink_type():
+  res = input("What type of drink would you like? [a] Brewed Coffee [b] Mocha [c] Latte ")
+  return res
       
 
     # Call coffee_bot()!
