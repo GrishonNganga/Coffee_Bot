@@ -1,16 +1,22 @@
 # Define your functions
 def coffee_bot():
     return "Welcome to the Cafe"
-def get_size(drink):
+def print_message():
+    return "I'm sorry, I did not understand your selection. Please enter the corresponding letter for your response."
+def get_size():
     res = input('What size drink can I get for you? \n[a] Small \n[b] Medium \n[c] Large \n> ')
     if res == "a":
-          return "small"
+      return "small"
     elif res == "b":
       return "medium"
     elif res == "c":
       return "large"
+    else:
+      print_message()
+      return get_size()  
+      
 
-# Call coffee_bot()!
+    # Call coffee_bot()!
 print(coffee_bot())
-size = get_size(1)
+size = get_size()
 print(size)
